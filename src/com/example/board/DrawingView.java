@@ -14,15 +14,14 @@ import android.view.View;
  */
 public class DrawingView extends View 
 {
-	private Bitmap mBitmap;
-	private Canvas mCanvas;
-	private Path mPath;
-	private Paint mBitmapPaint;
-	private ArrayList<Float> mPartsDrawingList;
-	public ArrayList<ArrayList<Float>> mOverallDrawingList;
-	private float mX, mY;
+	private Bitmap mBitmap;	// To hold the pixels
+	private Canvas mCanvas;	// To host 'draw' calls
+	private Path mPath;		// A drawing primitive used in this case
+	private Paint mPaint; 	// To define colors and styles of drawing
+	private ArrayList<Float> mPartsDrawingList;				// To store individual lines
+	public ArrayList<ArrayList<Float>> mOverallDrawingList;	// To store overall drawing 
+	private float mX, mY;	// Current location
 	private static final float TOUCH_TOLERANCE = 0;
-	private Paint mPaint; // Main Path Paint
 
 	public DrawingView(Context c) 
 	{
@@ -31,10 +30,9 @@ public class DrawingView extends View
 		// Set Drawing Paint Attributes
 		setPaint();
 		
-		mBitmap = Bitmap.createBitmap(400, 580, Bitmap.Config.ARGB_8888);
+		mBitmap = Bitmap.createBitmap(400, 580, Bitmap.Config.ARGB_8888); // 'ARGB_8888' => Each pixel is stored on 4 bytes.
 		mCanvas = new Canvas(mBitmap);
 		mPath = new Path();
-		mBitmapPaint = new Paint(Paint.DITHER_FLAG);
 
 		mOverallDrawingList = new ArrayList<ArrayList<Float>>();		
 	}
@@ -68,7 +66,7 @@ public class DrawingView extends View
 	@Override
 	protected void onDraw(Canvas canvas) 
 	{
-		canvas.drawBitmap(mBitmap, 0, 0, mBitmapPaint);
+		canvas.drawBitmap(mBitmap, 0, 0, null);
 		canvas.drawPath(mPath, mPaint);
 	}
 	
