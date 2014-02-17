@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- Welcome Title -->
+        <TextView
+            android:id="@+id/textview_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/two_welcome"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Outer Layout for Canvas -->
+        <LinearLayout
+            android:id="@+id/layout_drawing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" >
+
+                <EditText
+                    android:id="@+id/edittext_drawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/btn_two_save"
+                    android:hint="@string/two_drawing" />
+
+                <Button
+                    android:id="@id/btn_two_save"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:onClick="onButtonClick"
+                    android:text="Save" />
+            </RelativeLayout>
+
+            <!-- We will PROGOMATICALLY insert Canvas here -->
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

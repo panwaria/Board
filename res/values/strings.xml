@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Board</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="one_create_new">Create New</string>
+    <string name="one_open_existing">Open Existing</string>
+    <string name="one_select_board">Select a Board</string>
+    
+    <string name="two_welcome">Welcome to Board!</string>
+    <string name="two_drawing">Name Your Drawing</string>
+    
+</resources>
