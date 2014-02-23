@@ -30,4 +30,16 @@
         android:layout_marginRight="@dimen/btn_margin_horizontal"
         android:onClick="onButtonClick" />
     
+    <Button 
+        android:id="@+id/btn_one_delete_existing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/one_delete_existing"
+        android:layout_below="@id/btn_one_open_existing"
+        android:layout_marginTop="@dimen/btn_margin_vertical"
+        android:layout_marginBottom="@dimen/btn_margin_vertical"
+        android:layout_marginLeft="@dimen/btn_margin_horizontal"
+        android:layout_marginRight="@dimen/btn_margin_horizontal"
+        android:onClick="onButtonClick" />
+    
 </RelativeLayout>
